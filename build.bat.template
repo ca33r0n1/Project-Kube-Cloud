@@ -1,0 +1,3 @@
+#Might want to disable as will wipe all local images.
+docker image prune -a -f
+docker build --build-arg weburl=ChangeMe --no-cache --pull --build-arg servertype=ChangeMe --build-arg servergroup=ChangeMe --tag registry.auraside.com/auraside/base:dev .

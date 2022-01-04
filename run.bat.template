@@ -1,0 +1,1 @@
+docker run -i -t -e servergroup=ChangeMe -e jenkinskey="Change Me" -p 25565:25565 registry.auraside.com/auraside/base:dev
