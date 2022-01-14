@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.3
-FROM --platform=$BUILDPLATFORM alpine:latest AS build
+FROM alpine:latest
 
 LABEL org.opencontainers.image.authors="Cameron (ca33r0n1) <cameron@auraside.com>"
 LABEL org.opencontainers.image.version="1.0.4"
