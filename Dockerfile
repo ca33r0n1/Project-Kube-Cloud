@@ -33,8 +33,10 @@ WORKDIR /data
 # Create the MC Group & user.
 RUN addgroup --gid 1000 minecraft && adduser --system --shell /bin/false --uid 1000 --ingroup minecraft --home /data minecraft
 
-RUN wget -O runner.sh https://${weburl}/${servergroup}/${servertype}-install.sh
+COPY "runner.sh" "/data/runner.sh"
+
+#RUN wget -O runner.sh https://${weburl}/${servergroup}/${servertype}-install.sh
 
 RUN chmod +x runner.sh
 
-ENTRYPOINT ["/bin/sh","/data/runner.sh", "${jenkinskey}"]
+ENTRYPOINT ["/bin/sh","/data/runner.sh", "${weburl}", "${servergroup}", "${servertype}", "${jenkinskey}"]
