@@ -39,4 +39,4 @@ COPY "runner.sh" "/data/runner.sh"
 
 RUN chmod +x runner.sh
 
-ENTRYPOINT ["/bin/sh","/data/runner.sh", ${weburl}, ${servergroup}, ${servertype}, ${jenkinskey}]
+ENTRYPOINT ["runner.sh", ${weburl}, ${servergroup}, ${servertype}, ${jenkinskey}]
