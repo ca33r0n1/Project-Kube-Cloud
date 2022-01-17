@@ -34,9 +34,10 @@ WORKDIR /data
 RUN addgroup --gid 1000 minecraft && adduser --system --shell /bin/false --uid 1000 --ingroup minecraft --home /data minecraft
 
 COPY "runner.sh" "/data/runner.sh"
+COPY "mc-server-runner" "/data/mc-server-runner"
 
 #RUN wget -O runner.sh https://${weburl}/${servergroup}/${servertype}-install.sh
 
 RUN chmod +x runner.sh
 
-ENTRYPOINT "/data/runner.sh" ${weburl} ${servergroup} ${servertype} ${jenkinskey}
+ENTRYPOINT "mc-server-runner -shell /data/runner.sh" ${weburl} ${servergroup} ${servertype} ${jenkinskey}
