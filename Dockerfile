@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.3
-FROM alpine:latest
+FROM alpine:latest 
 
 LABEL org.opencontainers.image.authors="Cameron (ca33r0n1) <cameron@auraside.com>"
 LABEL org.opencontainers.image.version="1.0.4"
@@ -40,4 +40,4 @@ COPY "mc-server-runner" "/data/mc-server-runner"
 
 RUN chmod +x runner.sh
 
-ENTRYPOINT "mc-server-runner -shell /data/runner.sh" ${weburl} ${servergroup} ${servertype} ${jenkinskey}
+ENTRYPOINT "/data/mc-server-runner -shell /data/runner.sh" ${weburl} ${servergroup} ${servertype} ${jenkinskey}
