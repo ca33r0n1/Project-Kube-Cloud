@@ -40,4 +40,4 @@ COPY "mc-server-runner" "/data/mc-server-runner"
 
 RUN chmod +x runner.sh
 
-ENTRYPOINT "/data/mc-server-runner -shell /data/runner.sh" ${weburl} ${servergroup} ${servertype} ${jenkinskey}
+ENTRYPOINT "/data/runner.sh" ${weburl} ${servergroup} ${servertype} ${jenkinskey}
