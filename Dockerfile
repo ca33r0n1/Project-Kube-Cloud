@@ -2,7 +2,7 @@
 FROM alpine:latest 
 
 LABEL org.opencontainers.image.authors="Cameron (ca33r0n1) <cameron@auraside.com>"
-LABEL org.opencontainers.image.version="1.0.4"
+LABEL org.opencontainers.image.version="1.0.6"
 LABEL org.opencontainers.image.vendor="AuraSide Inc."
 
 # Allow connectivity to MC Server Port
@@ -30,14 +30,12 @@ RUN apk add --no-cache curl unzip openjdk8 wget nfs-utils openjdk11
 RUN mkdir /data
 WORKDIR /data
 
-# Create the MC Group & user.
-RUN addgroup --gid 1000 minecraft && adduser --system --shell /bin/false --uid 1000 --ingroup minecraft --home /data minecraft
-
 COPY "runner.sh" "/data/runner.sh"
+COPY "rcon-cli" "/data/rcon-cli"
 COPY "mc-server-runner" "/data/mc-server-runner"
 
-#RUN wget -O runner.sh https://${weburl}/${servergroup}/${servertype}-install.sh
-
 RUN chmod +x runner.sh
+RUN chmod +x rcon-cli
+RUN chmod +x mc-server-runner
 
 ENTRYPOINT "/data/runner.sh" ${weburl} ${servergroup} ${servertype} ${jenkinskey}

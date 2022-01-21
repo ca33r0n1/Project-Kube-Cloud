@@ -1,4 +1,4 @@
 #!/bin/sh
 echo "Starting Server Install Script"
-wget -O installer.sh "https://$1/$2/$3-install.sh"
-/bin/sh /data/installer.sh "$4"
+wget -O installer.sh "https://${weburl}/${servergroup}/${servertype}-install.sh"
+/bin/sh /data/installer.sh ${jenkinskey}
