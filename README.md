@@ -17,8 +17,6 @@ AuraCloud is the current Docker image that we use for cloud mass deployment of s
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
-
 `WEBURL` This is the web server that is hosting the static server contect. AuraSide uses [https://cdn.auraside.com](https://cdn.auraside.com) to host static file content. This will not work locally unless you get you IP Whitelisted on the server or find a way to send your OAuth2 Key with a request. 
 
 `servertype` It's the type of the server. This will either be `game`,`proxy` or `software`. 
