@@ -24,7 +24,7 @@ ARG servergroup
 ARG jenkinskey
 
 # Install Applications to the OS
-RUN apk add --no-cache curl unzip openjdk8 wget nfs-utils openjdk11
+RUN apk add --no-cache curl unzip openjdk8 wget nfs-utils openjdk11 redis
 
 # Setup the Base Dir's
 RUN mkdir /data
