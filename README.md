@@ -60,6 +60,17 @@ So the runner.sh script that we invoke just calls the CDN and pulls down a the r
 
 Please see the example install.sh script here : [SquidGame Installer Script](https://cdn.auraside.com/squidgame/game-install.sh)
 
+### How do I connect to the console?
+
+You will need to access Rancher (Helm) and use the Kubectl CMD (See Image below).
+![image](https://user-images.githubusercontent.com/12416650/154968879-31ca3dfe-6e92-40b2-899b-fa036fc49501.png)
+
+You will only be able to connect to containers in the 'default' namespace.
+
+In the command line shell that you have created use this command: kubectl attach <Pod Name Here> -i
+ 
+This will connect you to the same view as the View Log option you have.
+
 ## Support
 
 For support, email ca33r0n1@auraside.com or join our ping @Ca33r0n1 in Teams.
