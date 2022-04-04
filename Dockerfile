@@ -2,7 +2,7 @@
 FROM alpine:latest 
 
 LABEL org.opencontainers.image.authors="Cameron (ca33r0n1) <cameron@auraside.com>"
-LABEL org.opencontainers.image.version="1.0.6"
+LABEL org.opencontainers.image.version="1.0.7"
 LABEL org.opencontainers.image.vendor="AuraSide Inc."
 
 # Allow connectivity to MC Server Port
@@ -24,7 +24,7 @@ ARG servergroup
 ARG jenkinskey
 
 # Install Applications to the OS
-RUN apk add --no-cache curl unzip openjdk8 wget nfs-utils openjdk11 redis
+RUN apk add --no-cache curl unzip openjdk8 wget nfs-utils openjdk11 redis ca-certificates
 
 # Setup the Base Dir's
 RUN mkdir /data
