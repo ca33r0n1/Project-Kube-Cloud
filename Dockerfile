@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1.3
-FROM alpine:3.18.3 
+FROM alpine:latest
 
-LABEL org.opencontainers.image.authors="Cameron (ca33r0n1) <cameron@auraside.com>"
-LABEL org.opencontainers.image.version="1.0.7"
-LABEL org.opencontainers.image.vendor="AuraSide Inc."
+LABEL org.opencontainers.image.authors="Cameron (ca33r0n1) <cameron@dev-ops.tips>"
+LABEL org.opencontainers.image.version="1.0.0"
+LABEL org.opencontainers.image.vendor="Project Refresh LTD."
 
 # Allow connectivity to MC Server Port
 EXPOSE 25565/tcp
