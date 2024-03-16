@@ -12,7 +12,7 @@ Project Kloud is the current Docker image that we use for cloud mass deployment 
 
 ## Environment Variables
 
-`WEBURL` This is the web server that is hosting the static server contect. AuraSide uses [https://cdn.auraside.com](https://cdn.auraside.com) to host static file content. This will not work locally unless you get you IP Whitelisted on the server or find a way to send your OAuth2 Key with a request. 
+`WEBURL` This is the web server that is hosting the static server contect. This will not work locally unless you get you IP Whitelisted on the server or find a way to send your OAuth2 Key with a request. 
 
 `servertype` It's the type of the server. This will either be `game`,`proxy` or `software`. 
 
@@ -27,7 +27,7 @@ Once you have authenticated docker you can run this image with the the values ch
 
 ### Local Deployments
 ```bash
-docker run -i -t -e servergroup=ChangeMe -e jenkinskey="Change Me" -p 25565:25565 quay.io/ca33r0n1as/auraside-base
+docker run -i -t -e servergroup=ChangeMe -e jenkinskey="Change Me" -p 25565:25565 
 ```
 
 ### Cloud Deployments
