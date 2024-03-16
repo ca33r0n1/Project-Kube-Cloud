@@ -1,15 +1,10 @@
-# Aura Cloud (Previously base-image)
-[![Docker Repository on Quay](https://quay.io/repository/ca33r0n1as/auraside-base/status?token=d24690dc-0c9b-4538-a127-6eb6a3269be3 "Docker Repository on Quay")](https://quay.io/repository/ca33r0n1as/auraside-base)
+# Project Kloud
 
-AuraCloud is the current Docker image that we use for cloud mass deployment of server software.
-
-
-
+Project Kloud is the current Docker image that we use for cloud mass deployment of server software.
 
 ## Authors
 
-- [@ca33r0n1](https://www.github.com/ca33r0n1) - Cheif Technology Officer - Lead Developer of this Project
-
+- [@ca33r0n1](https://www.github.com/ca33r0n1)
 
 ## Acknowledgements
 
@@ -21,9 +16,9 @@ AuraCloud is the current Docker image that we use for cloud mass deployment of s
 
 `servertype` It's the type of the server. This will either be `game`,`proxy` or `software`. 
 
-`servergroup` is what we use to group the files in a set folder to help keep the static web server tidy.  Current examples are currently `squidgame`, `proxy` `squidgame-hub` and `quickmatch`.
+`servergroup` is what we use to group the files in a set folder to help keep the static web server tidy.  Current examples are currently `hub`, `proxy` `game` and `software`.
 
-`jenkinskey` This is a very important variable that must be filled if you want to be able to automatically download the latest version of files directly from our CI [Jenkins](https://jenkins.auraside.com).
+`jenkinskey` This is a very important variable that must be filled if you want to be able to automatically download the latest version of files directly from our CI [Jenkins](https://jenkins.dev-ops.tips).
 ## Deployment
 
 To deploy this image to our cloud you will either need to request access from @Ca330rn1 or use one of the secrets that are stored in the Kuberneties cluster.
@@ -58,8 +53,7 @@ The CDN is out Web Server that contains most of the static content that we use t
 
 So the runner.sh script that we invoke just calls the CDN and pulls down a the relevant installer script.
 
-Please see the example install.sh script here : [SquidGame Installer Script](https://cdn.auraside.com/squidgame/game-install.sh)
-
+Please see the example install.sh script here: <LINK PENDING UPDATE>
 ### How do I connect to the console?
 
 You will need to access Rancher (Helm) and use the Kubectl CMD (See Image below).
@@ -73,4 +67,4 @@ This will connect you to the same view as the View Log option you have.
 
 ## Support
 
-For support, email ca33r0n1@auraside.com or join our ping @Ca33r0n1 in Teams.
+This is offered with help your self support :D
