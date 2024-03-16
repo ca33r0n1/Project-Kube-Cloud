@@ -1,6 +1,6 @@
-# Project Kloud
+# Project Kube Cloud
 
-Project Kloud is the current Docker image that we use for cloud mass deployment of server software.
+Project Kube Cloud is the current Docker image that we use for cloud mass deployment of server software.
 
 ## Authors
 
